@@ -1,0 +1,40 @@
+<div class="submission-section">
+	<h2>{{title}}</h2>
+	<dx-data-grid
+		[showColumnLines]="false"
+		[showRowLines]="true"
+		[showBorders]="false"
+		[dataSource]="items">
+		<dxo-header-filter
+			[visible]="true">
+		</dxo-header-filter>
+		<dxo-filter-row
+			[visible]="true"
+			[applyFilter]="auto">
+		</dxo-filter-row>
+		<dxi-column
+			dataField="Submission">
+		</dxi-column>
+		<dxi-column
+			dataField="Type">
+		</dxi-column>
+		<dxi-column
+			dataField="Status">
+		</dxi-column>
+		<dxi-column
+			dataField="Study">
+		</dxi-column>
+		<dxi-column
+			dataField="Site">
+		</dxi-column>
+		<dxi-column
+			caption="Submitted by"
+			dataField="SubmittedBy">
+		</dxi-column>
+		<dxi-column
+			dataType="date"
+			caption="Date Submitted"
+			dataField="SubmittedDate">
+		</dxi-column>
+	</dx-data-grid>
+</div>

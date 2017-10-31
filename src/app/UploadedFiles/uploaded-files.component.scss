@@ -1,0 +1,21 @@
+/deep/ .dx-datagrid-rowsview .dx-select-checkboxes-hidden > tbody > tr > td > .dx-select-checkbox{
+	display: inline-block;
+}
+/deep/ .dx-datagrid-content .dx-datagrid-table .dx-row .dx-command-select{
+	text-align: left !important;
+	min-width: 30px;
+	width: 30px;
+}
+
+.uploaded-files-section {
+	padding: 20px 50px;
+	h2{
+		font-size: 21px;
+		font-family: 'ArialMT', 'Arial', sans-serif;
+		font-weight: 400;
+		margin-bottom: 10px;
+	}
+	.buttons{
+		margin-bottom: 10px;
+	}
+}

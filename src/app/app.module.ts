@@ -1,16 +1,32 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+import { UploadedFilesComponent } from './UploadedFiles/uploaded-files.component';
+import { SubmissionComponent } from './Submission/submission.component';
+
+import { DxDataGridComponent,
+	DxDataGridModule,
+	DxSelectBoxModule,
+	DxCheckBoxModule,
+	DxButtonModule } from 'devextreme-angular';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+	imports: [
+		BrowserModule,
+		HttpModule,
+		DxDataGridModule,
+		DxSelectBoxModule,
+		DxCheckBoxModule,
+		DxButtonModule
+	],
+	declarations: [
+		AppComponent,
+		UploadedFilesComponent,
+		SubmissionComponent
+	],
+	bootstrap: [AppComponent]
 })
+
 export class AppModule { }
