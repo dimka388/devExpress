@@ -12,19 +12,24 @@
 			[visible]="true"
 			[applyFilter]="auto">
 		</dxo-filter-row>
+		<dxo-paging [pageSize]="10"></dxo-paging>
 		<dxi-column
+			cssClass="blue"
 			dataField="Submission">
 		</dxi-column>
 		<dxi-column
 			dataField="Type">
 		</dxi-column>
 		<dxi-column
+			cellTemplate="cellTemplate"
 			dataField="Status">
 		</dxi-column>
 		<dxi-column
+			cssClass="blue"
 			dataField="Study">
 		</dxi-column>
 		<dxi-column
+			cssClass="blue"
 			dataField="Site">
 		</dxi-column>
 		<dxi-column
@@ -34,7 +39,11 @@
 		<dxi-column
 			dataType="date"
 			caption="Date Submitted"
-			dataField="SubmittedDate">
+			dataField="SubmittedDate"
+			[customizeText]="customizeDate">
 		</dxi-column>
+		<div *dxTemplate="let data of 'cellTemplate'" [class]="data.value | lowercase">
+			{{data.value}}
+		</div>
 	</dx-data-grid>
 </div>

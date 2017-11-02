@@ -1,14 +1,43 @@
-/deep/ .dx-datagrid-content .dx-datagrid-table .dx-row > td{
-	vertical-align: middle;
-	white-space: normal;
-}
-
-.submission-section {
+/deep/ .submission-section{
 	padding: 20px 50px;
+
 	h2{
 		font-size: 21px;
 		font-family: 'ArialMT', 'Arial', sans-serif;
 		font-weight: 400;
 		margin: 0 0 10px;
+	}
+
+	.dx-datagrid-rowsview{
+		td{
+			vertical-align: middle !important;
+			white-space: normal;
+		}
+		.blue{
+			color: #106CB7;
+			cursor: pointer;
+			&:hover{
+				text-decoration: underline;
+			}
+		}
+
+		.draft{
+			color: #99A9B4;
+		}
+		.received{
+			color: #8AD4DF;
+		}
+		.pre-processing{
+			color: #C1D72D;
+		}
+		.review{
+			color: #3AB54A;
+		}
+		.post-processing{
+			color: #106CB7;
+		}
+		.complete{
+			color: #6F818F;
+		}
 	}
 }

@@ -1,0 +1,76 @@
+.upload-section{
+    padding: 30px;
+    border: 1px solid #ddd;
+    h2{
+        margin: 0 0 20px;
+    }
+    p{margin: 0 0 20px;}
+}
+
+.qq-upload-list{
+    padding: 0;
+    margin: 0 0 20px;
+    list-style: none;
+    li{
+        padding: 20px 0;
+        border-bottom: 1px solid #ddd;
+        &.qq-upload-success{
+            background: #74e074;
+        }
+        &.qq-upload-fail{
+            background: #ffc6c6;
+        }
+        &.qq-in-progress{
+            background: #ffffb8;
+        }
+        &.qq-upload-retrying{
+            background: #c6b8ff;
+        }
+        &.qq-upload-retryable{
+            background: #b8f5ff;
+        }
+    }
+    .row{
+        display: flex;
+        justify-content: space-between;
+    }
+    .qq-progress-bar-container-selector{
+        position: relative;
+        overflow: hidden;
+        height: 2px;
+        max-width: 400px;
+        background: #ddd;
+
+        .qq-progress-bar-selector{
+            position: absolute;
+            top:0;
+            left:0;
+            bottom: 0px;
+            background: #adf;
+        }
+    }
+}
+
+
+.qq-upload-drop-area-selector{
+    width: 100%;
+    height: 200px;
+    background: #dee9f1;
+    position: relative;
+    color: #99A9B4;
+    font-size: 14px;
+    padding: 30px;
+    margin: 0 0 20px;
+    box-sizing: border-box;
+
+    .bottom-text{
+        position: absolute;
+        bottom: 30px;
+        left: 30px;
+        right: 30px;
+    }
+}
+
+#qq-template-manual-trigger{
+    display: none;
+}

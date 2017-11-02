@@ -5,6 +5,10 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { UploadedFilesComponent } from './UploadedFiles/uploaded-files.component';
 import { SubmissionComponent } from './Submission/submission.component';
+import { SubmissionDetailsComponent } from './SubmissionDetails/submission-details.component';
+import { FileUploadComponent } from './FileUpload/fileupload.component';
+import { DataGridComponent } from './DevExpDataGrid/datagrid.component';
+import { SampleComponent } from './Sample/sample.component';
 
 import { DxDataGridComponent,
 	DxDataGridModule,
@@ -24,7 +28,11 @@ import { DxDataGridComponent,
 	declarations: [
 		AppComponent,
 		UploadedFilesComponent,
-		SubmissionComponent
+		SubmissionComponent,
+		SubmissionDetailsComponent,
+		FileUploadComponent,
+		DataGridComponent,
+		SampleComponent
 	],
 	bootstrap: [AppComponent]
 })

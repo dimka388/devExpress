@@ -14,6 +14,15 @@ export class SubmissionComponent {
 	title: string = 'Submission';
 	items: Item[];
 
+	customizeDate(cellData) {
+		let monthes = ["Jan","Feb","Mar","Apr","May","June","July","Aug","Sept","Oct","Nov","Dec"],
+			date = cellData.value,
+			month = date.getMonth(),
+			day = date.getDate(),
+			year = date.getFullYear();
+			return `${day}-${monthes[month]}-${year}`;
+	}
+
 	constructor(private service: Service) {
 		this.items = service.getItems();
 	}

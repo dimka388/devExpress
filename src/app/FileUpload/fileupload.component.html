@@ -1,0 +1,56 @@
+<div class="upload-section">
+    <h2>Smart submission process</h2>
+    <p>Please use our smart upload form. After your documents have been uploaded, the system will fill the information in the upcoming forms. Please check it and make edits if necessary. After that feel free to submit!</p>
+    <!-- Fine-Uploader selector element -->
+    <div id="fine-uploader-manual-trigger"></div>
+    <!-- Fine-Uploader HTML template -->
+    <div id="qq-template-manual-trigger">
+        <div class="qq-uploader-selector qq-uploader qq-gallery" qq-drop-area-text="Drop files here">
+            <ul class="qq-upload-list-selector qq-upload-list" role="region" aria-live="polite" aria-relevant="additions removals">
+                <li>
+                    <div class="row">
+                        <div class="cell">
+                            <div class="qq-file-info">
+                                <div class="qq-file-name">
+                                    <span class="qq-upload-file-selector qq-upload-file"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="cell">
+                            <span class="qq-edit-filename-icon-selector qq-btn qq-edit-filename-icon" aria-label="Edit filename"></span>
+                            <input class="qq-edit-filename-selector qq-edit-filename" tabindex="0" type="text">
+                        </div> -->
+                        <div class="cell">
+                            <span class="qq-upload-size-selector qq-upload-size"></span>
+                            <span role="status" class="qq-upload-status-text-selector qq-upload-status-text"></span>
+                            <dx-button text="Cancel" class="qq-upload-cancel-selector qq-upload-cancel"></dx-button>
+                            <dx-button text="Retry" class="qq-upload-retry-selector qq-upload-retry"></dx-button>
+                            <dx-button text="Delete" class="qq-btn qq-upload-delete-selector qq-upload-delete"></dx-button>
+                            <dx-button text="Pause" class="qq-btn qq-upload-pause-selector qq-upload-pause"></dx-button>
+                            <dx-button text="Continue" class="qq-btn qq-upload-continue-selector qq-upload-continue"></dx-button>
+                        </div>
+                    </div>
+                    <div class="qq-progress-bar-container-selector qq-progress-bar-container">
+                        <div role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" class="qq-progress-bar-selector qq-progress-bar"></div>
+                    </div>
+                </li>
+            </ul>
+            <div class="qq-upload-drop-area-selector qq-upload-drop-area">
+                <span class="qq-upload-drop-area-text-selector"></span>
+                <em>Use drag and drop to add your files</em>
+                <span class="bottom-text">
+                    <em>Allowed file formats: xls, .xlsx, .ppt, .pptx, .msg, .htm, .html, .pub, .png, .bmp, .tif, .gif, .jpeg, .jpg, .avi, .m4v, .mov, .mp3,  .wav, .wma, .mp4, .mpg, .swf, .wmv</em>
+                    <br>
+                    <br>
+                    <em>Please do not upload files over 1Gb</em>
+                </span>
+            </div>
+            <p>...or use 'Browse" button</p>
+            <dx-button text="BROWSE MORE FILES..." class="qq-upload-button-selector qq-upload-button"></dx-button>
+        </div>
+    </div>
+    <br>
+    <hr>
+    <br>
+    <dx-button text="Start Uploading" (click)="uploadFiles()"></dx-button>
+</div>

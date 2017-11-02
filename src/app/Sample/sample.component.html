@@ -1,0 +1,65 @@
+<h2>{{title}}</h2>
+
+<dx-data-grid
+id="gridContainer"
+[dataSource]="orders">
+<dxo-selection
+    [selectAllMode]="page"
+    [showCheckBoxesMode]="always"
+    mode="multiple"
+></dxo-selection>  
+<dxo-editing
+    [allowUpdating]="true"
+    [allowAdding]="true"
+    [allowDeleting]="true">
+</dxo-editing>
+<!-- <dxo-scrolling
+    mode="infinite">
+</dxo-scrolling> -->
+<dxo-filter-row
+    [visible]="showFilterRow"
+    [applyFilter]="auto">
+</dxo-filter-row>
+<dxo-header-filter
+    [visible]="showHeaderFilter">
+</dxo-header-filter>
+<dxo-search-panel
+    [visible]="true"
+    [width]="240"
+    placeholder="Search...">
+</dxo-search-panel>
+<dxi-column
+    dataField="OrderNumber"
+    [width]="130"
+    caption="Invoice Number">
+    <dxo-header-filter
+        [groupInterval]="10000">
+    </dxo-header-filter>
+</dxi-column>
+<dxi-column
+    dataField="OrderDate"
+    alignment="right"
+    dataType="date">
+    <dxo-header-filter
+        [dataSource]="orderHeaderFilter">
+    </dxo-header-filter>
+</dxi-column>
+<dxi-column
+    dataField="SaleAmount"
+    alignment="right"
+    format="currency">
+    <dxo-header-filter
+        [dataSource]="saleAmountHeaderFilter">
+    </dxo-header-filter>
+</dxi-column>
+<dxi-column
+    dataField="Employee"></dxi-column>
+<dxi-column
+    dataField="CustomerStoreCity"
+    caption="City">
+</dxi-column>
+<dxi-column
+    dataField="CustomerStoreState"
+    caption="State">
+</dxi-column>
+</dx-data-grid>

@@ -1,0 +1,32 @@
+<div class="submission-details-section">
+	<h2>{{title}}</h2>
+	<dx-data-grid
+		[showColumnLines]="false"
+		[showRowLines]="true"
+		[showBorders]="false"
+		[dataSource]="items">
+		<dxo-paging [pageSize]="10"></dxo-paging>
+		<dxi-column
+			dataField="id">
+		</dxi-column>
+		<dxi-column
+			dataField="FileName">
+		</dxi-column>
+		<dxi-column
+			dataField="PreferredName">
+		</dxi-column>
+		<dxi-column
+			dataField="Status">
+		</dxi-column>
+		<dxi-column
+			caption="Submitted by"
+			dataField="SubmittedBy">
+		</dxi-column>
+		<dxi-column
+			dataType="date"
+			caption="Date Submitted"
+			dataField="SubmittedDate"
+			[customizeText]="customizeDate">
+		</dxi-column>
+	</dx-data-grid>
+</div>
