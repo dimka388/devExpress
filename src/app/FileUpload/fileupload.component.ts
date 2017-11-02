@@ -22,7 +22,7 @@ export class FileUploadComponent implements OnInit, AfterViewInit {
          */
         this.uiOptions = {
             debug: false,
-            autoUpload: false,
+            autoUpload: true,
             element: document.getElementById('fine-uploader-manual-trigger'),
             template: "qq-template-manual-trigger",
             request: {
