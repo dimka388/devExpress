@@ -6,8 +6,13 @@
 		[showBorders]="false"
 		[dataSource]="items">
 		<dxo-paging [pageSize]="10"></dxo-paging>
+		<dxo-selection
+			[selectAllMode]="page"
+			[showCheckBoxesMode]="always"
+			mode="multiple">
+		</dxo-selection>
 		<dxi-column
-			dataField="id">
+			dataField="DocumentID">
 		</dxi-column>
 		<dxi-column
 			dataField="FileName">
