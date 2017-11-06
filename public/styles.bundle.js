@@ -35,7 +35,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "#wrapper{\n    max-width: 1200px;\n    margin: 0 auto;\n}", ""]);
+exports.push([module.i, "#wrapper{\r\n    max-width: 1200px;\r\n    margin: 0 auto;\r\n}", ""]);
 
 // exports
 

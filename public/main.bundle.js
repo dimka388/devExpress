@@ -199,7 +199,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/Sample/sample.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<h2>{{title}}</h2>\n\n<dx-data-grid\nid=\"gridContainer\"\n[dataSource]=\"orders\">\n<dxo-selection\n    [selectAllMode]=\"page\"\n    [showCheckBoxesMode]=\"always\"\n    mode=\"multiple\"\n></dxo-selection>  \n<dxo-editing\n    [allowUpdating]=\"true\"\n    [allowAdding]=\"true\"\n    [allowDeleting]=\"true\">\n</dxo-editing>\n<!-- <dxo-scrolling\n    mode=\"infinite\">\n</dxo-scrolling> -->\n<dxo-filter-row\n    [visible]=\"showFilterRow\"\n    [applyFilter]=\"auto\">\n</dxo-filter-row>\n<dxo-header-filter\n    [visible]=\"showHeaderFilter\">\n</dxo-header-filter>\n<dxo-search-panel\n    [visible]=\"true\"\n    [width]=\"240\"\n    placeholder=\"Search...\">\n</dxo-search-panel>\n<dxi-column\n    dataField=\"OrderNumber\"\n    [width]=\"130\"\n    caption=\"Invoice Number\">\n    <dxo-header-filter\n        [groupInterval]=\"10000\">\n    </dxo-header-filter>\n</dxi-column>\n<dxi-column\n    dataField=\"OrderDate\"\n    alignment=\"right\"\n    dataType=\"date\">\n    <dxo-header-filter\n        [dataSource]=\"orderHeaderFilter\">\n    </dxo-header-filter>\n</dxi-column>\n<dxi-column\n    dataField=\"SaleAmount\"\n    alignment=\"right\"\n    format=\"currency\">\n    <dxo-header-filter\n        [dataSource]=\"saleAmountHeaderFilter\">\n    </dxo-header-filter>\n</dxi-column>\n<dxi-column\n    dataField=\"Employee\"></dxi-column>\n<dxi-column\n    dataField=\"CustomerStoreCity\"\n    caption=\"City\">\n</dxi-column>\n<dxi-column\n    dataField=\"CustomerStoreState\"\n    caption=\"State\">\n</dxi-column>\n</dx-data-grid>\n"
+module.exports = "<h2>{{title}}</h2>\r\n\r\n<dx-data-grid\r\nid=\"gridContainer\"\r\n[dataSource]=\"orders\">\r\n<dxo-selection\r\n    [selectAllMode]=\"page\"\r\n    [showCheckBoxesMode]=\"always\"\r\n    mode=\"multiple\"\r\n></dxo-selection>  \r\n<dxo-editing\r\n    [allowUpdating]=\"true\"\r\n    [allowAdding]=\"true\"\r\n    [allowDeleting]=\"true\">\r\n</dxo-editing>\r\n<!-- <dxo-scrolling\r\n    mode=\"infinite\">\r\n</dxo-scrolling> -->\r\n<dxo-filter-row\r\n    [visible]=\"showFilterRow\"\r\n    [applyFilter]=\"auto\">\r\n</dxo-filter-row>\r\n<dxo-header-filter\r\n    [visible]=\"showHeaderFilter\">\r\n</dxo-header-filter>\r\n<dxo-search-panel\r\n    [visible]=\"true\"\r\n    [width]=\"240\"\r\n    placeholder=\"Search...\">\r\n</dxo-search-panel>\r\n<dxi-column\r\n    dataField=\"OrderNumber\"\r\n    [width]=\"130\"\r\n    caption=\"Invoice Number\">\r\n    <dxo-header-filter\r\n        [groupInterval]=\"10000\">\r\n    </dxo-header-filter>\r\n</dxi-column>\r\n<dxi-column\r\n    dataField=\"OrderDate\"\r\n    alignment=\"right\"\r\n    dataType=\"date\">\r\n    <dxo-header-filter\r\n        [dataSource]=\"orderHeaderFilter\">\r\n    </dxo-header-filter>\r\n</dxi-column>\r\n<dxi-column\r\n    dataField=\"SaleAmount\"\r\n    alignment=\"right\"\r\n    format=\"currency\">\r\n    <dxo-header-filter\r\n        [dataSource]=\"saleAmountHeaderFilter\">\r\n    </dxo-header-filter>\r\n</dxi-column>\r\n<dxi-column\r\n    dataField=\"Employee\"></dxi-column>\r\n<dxi-column\r\n    dataField=\"CustomerStoreCity\"\r\n    caption=\"City\">\r\n</dxi-column>\r\n<dxi-column\r\n    dataField=\"CustomerStoreState\"\r\n    caption=\"State\">\r\n</dxi-column>\r\n</dx-data-grid>\r\n"
 
 /***/ }),
 
@@ -735,7 +735,7 @@ var _a;
 /***/ "../../../../../src/app/Submission/submission.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"submission-section\">\n\t<h2>{{title}}</h2>\n\t<dx-data-grid\n\t\t[showColumnLines]=\"false\"\n\t\t[showRowLines]=\"true\"\n\t\t[showBorders]=\"false\"\n\t\t[dataSource]=\"items\">\n\t\t<dxo-header-filter\n\t\t\t[visible]=\"true\">\n\t\t</dxo-header-filter>\n\t\t<dxo-filter-row\n\t\t\t[visible]=\"true\"\n\t\t\t[applyFilter]=\"auto\">\n\t\t</dxo-filter-row>\n\t\t<dxo-paging [pageSize]=\"10\"></dxo-paging>\n\t\t<dxi-column\n\t\t\tcssClass=\"blue\"\n\t\t\tdataField=\"Submission\">\n\t\t</dxi-column>\n\t\t<dxi-column\n\t\t\tdataField=\"Type\">\n\t\t</dxi-column>\n\t\t<dxi-column\n\t\t\tcellTemplate=\"cellTemplate\"\n\t\t\tdataField=\"Status\">\n\t\t</dxi-column>\n\t\t<dxi-column\n\t\t\tcssClass=\"blue\"\n\t\t\tdataField=\"Study\">\n\t\t</dxi-column>\n\t\t<dxi-column\n\t\t\tcssClass=\"blue\"\n\t\t\tdataField=\"Site\">\n\t\t</dxi-column>\n\t\t<dxi-column\n\t\t\tcaption=\"Submitted by\"\n\t\t\tdataField=\"SubmittedBy\">\n\t\t</dxi-column>\n\t\t<dxi-column\n\t\t\tdataType=\"date\"\n\t\t\tcaption=\"Date Submitted\"\n\t\t\tdataField=\"SubmittedDate\"\n\t\t\t[customizeText]=\"customizeDate\">\n\t\t</dxi-column>\n\t\t<div *dxTemplate=\"let data of 'cellTemplate'\" [class]=\"data.value | lowercase\">\n\t\t\t{{data.value}}\n\t\t</div>\n\t</dx-data-grid>\n</div>"
+module.exports = "<div class=\"submission-section\">\r\n\t<h2>{{title}}</h2>\r\n\t<dx-data-grid\r\n\t\t[showColumnLines]=\"false\"\r\n\t\t[showRowLines]=\"true\"\r\n\t\t[showBorders]=\"false\"\r\n\t\t[dataSource]=\"items\">\r\n\t\t<dxo-header-filter\r\n\t\t\t[visible]=\"true\">\r\n\t\t</dxo-header-filter>\r\n\t\t<dxo-filter-row\r\n\t\t\t[visible]=\"true\"\r\n\t\t\t[applyFilter]=\"auto\">\r\n\t\t</dxo-filter-row>\r\n\t\t<dxo-paging [pageSize]=\"10\"></dxo-paging>\r\n\t\t<dxi-column\r\n\t\t\tcssClass=\"blue\"\r\n\t\t\tdataField=\"Submission\">\r\n\t\t</dxi-column>\r\n\t\t<dxi-column\r\n\t\t\tdataField=\"Type\">\r\n\t\t</dxi-column>\r\n\t\t<dxi-column\r\n\t\t\tcellTemplate=\"cellTemplate\"\r\n\t\t\tdataField=\"Status\">\r\n\t\t</dxi-column>\r\n\t\t<dxi-column\r\n\t\t\tcssClass=\"blue\"\r\n\t\t\tdataField=\"Study\">\r\n\t\t</dxi-column>\r\n\t\t<dxi-column\r\n\t\t\tcssClass=\"blue\"\r\n\t\t\tdataField=\"Site\">\r\n\t\t</dxi-column>\r\n\t\t<dxi-column\r\n\t\t\tcaption=\"Submitted by\"\r\n\t\t\tdataField=\"SubmittedBy\">\r\n\t\t</dxi-column>\r\n\t\t<dxi-column\r\n\t\t\tdataType=\"date\"\r\n\t\t\tcaption=\"Date Submitted\"\r\n\t\t\tdataField=\"SubmittedDate\"\r\n\t\t\t[customizeText]=\"customizeDate\">\r\n\t\t</dxi-column>\r\n\t\t<div *dxTemplate=\"let data of 'cellTemplate'\" [class]=\"data.value | lowercase\">\r\n\t\t\t{{data.value}}\r\n\t\t</div>\r\n\t</dx-data-grid>\r\n</div>"
 
 /***/ }),
 
@@ -870,7 +870,7 @@ var _a;
 /***/ "../../../../../src/app/SubmissionDetails/submission-details.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"submission-details-section\">\n\t<h2>{{title}}</h2>\n\t<dx-data-grid\n\t\t[showColumnLines]=\"false\"\n\t\t[showRowLines]=\"true\"\n\t\t[showBorders]=\"false\"\n\t\t[dataSource]=\"items\">\n\t\t<dxo-paging [pageSize]=\"10\"></dxo-paging>\n\t\t<dxi-column\n\t\t\tdataField=\"id\">\n\t\t</dxi-column>\n\t\t<dxi-column\n\t\t\tdataField=\"FileName\">\n\t\t</dxi-column>\n\t\t<dxi-column\n\t\t\tdataField=\"PreferredName\">\n\t\t</dxi-column>\n\t\t<dxi-column\n\t\t\tdataField=\"Status\">\n\t\t</dxi-column>\n\t\t<dxi-column\n\t\t\tcaption=\"Submitted by\"\n\t\t\tdataField=\"SubmittedBy\">\n\t\t</dxi-column>\n\t\t<dxi-column\n\t\t\tdataType=\"date\"\n\t\t\tcaption=\"Date Submitted\"\n\t\t\tdataField=\"SubmittedDate\"\n\t\t\t[customizeText]=\"customizeDate\">\n\t\t</dxi-column>\n\t</dx-data-grid>\n</div>"
+module.exports = "<div class=\"submission-details-section\">\r\n\t<h2>{{title}}</h2>\r\n\t<div>\r\n\t\t<dx-button text=\"Load Old Items\" (click)=\"loadData(true)\"></dx-button>\r\n\t\t<dx-button text=\"Load New Items\" (click)=\"loadData(false)\"></dx-button>\r\n\t</div>\r\n\t<dx-tree-list\r\n\t\t[showColumnLines]=\"false\"\r\n\t\t[showRowLines]=\"true\"\r\n\t\t[showBorders]=\"false\"\r\n\t\t[dataSource]=\"items\"\r\n\t\titemsExpr=\"InnerItems\"\r\n\t\tclass=\"treeContainer\"\r\n\t\tdataStructure=\"tree\">\r\n\t\t<dxo-selection mode=\"multiple\"></dxo-selection>\r\n\t\t<dxi-column dataField=\"DocumentID\"></dxi-column>\r\n\t\t<dxi-column dataField=\"FileName\"></dxi-column>\r\n\t\t<dxi-column dataField=\"PreferredName\"></dxi-column>\r\n\t\t<dxi-column dataField=\"Status\"></dxi-column>\r\n\t\t<dxi-column dataField=\"SubmittedBy\"></dxi-column>\r\n\t\t<dxi-column\r\n\t\t\tdataType=\"date\"\r\n\t\t\tcellTemplate=\"dateCell\"\r\n\t\t\tdataField=\"SubmittedDate\"\r\n\t\t\tcaption=\"Date Submitted\"\r\n\t\t\t>\r\n\t\t</dxi-column>\r\n\t\t<span *dxTemplate=\"let cellData of 'dateCell'\">\r\n\t\t\t{{cellData.value | date: 'dd-MMM-yyyy'}}\r\n\t\t</span>\r\n\t</dx-tree-list>\r\n</div>"
 
 /***/ }),
 
@@ -882,7 +882,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "/deep/ .submission-details-section {\n  padding: 20px 50px; }\n  /deep/ .submission-details-section h2 {\n    font-size: 21px;\n    font-family: 'ArialMT', 'Arial', sans-serif;\n    font-weight: 400;\n    margin: 0 0 10px; }\n  /deep/ .submission-details-section .dx-datagrid-rowsview td {\n    vertical-align: middle !important;\n    white-space: normal; }\n", ""]);
+exports.push([module.i, "/deep/ .submission-details-section {\n  padding: 20px 50px; }\n  /deep/ .submission-details-section .treeContainer {\n    height: 375px; }\n  /deep/ .submission-details-section h2 {\n    font-size: 21px;\n    font-family: 'ArialMT', 'Arial', sans-serif;\n    font-weight: 400;\n    margin: 0 0 10px; }\n  /deep/ .submission-details-section .dx-datagrid-table td {\n    vertical-align: middle !important;\n    white-space: normal; }\n  /deep/ .submission-details-section .dx-treelist-empty-space {\n    left: 18px; }\n  /deep/ .submission-details-section [aria-expanded] .dx-select-checkbox {\n    display: none; }\n", ""]);
 
 // exports
 
@@ -898,6 +898,7 @@ module.exports = module.exports.toString();
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SubmissionDetailsComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__submission_details_service__ = __webpack_require__("../../../../../src/app/SubmissionDetails/submission-details.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -908,29 +909,304 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
 var SubmissionDetailsComponent = (function () {
-    function SubmissionDetailsComponent() {
+    function SubmissionDetailsComponent(service) {
+        var _this = this;
+        this.service = service;
         this.title = 'Submission Details';
+        this.loadData = function (state) {
+            if (state) {
+                _this.items = _this.service.getOldItems();
+            }
+            else {
+                _this.items = _this.service.getNewItems();
+            }
+        };
+        this.items = service.getItems();
     }
     return SubmissionDetailsComponent;
 }());
 SubmissionDetailsComponent = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'submission-details-app',
+        providers: [__WEBPACK_IMPORTED_MODULE_1__submission_details_service__["a" /* Service */]],
         template: __webpack_require__("../../../../../src/app/SubmissionDetails/submission-details.component.html"),
         styles: [__webpack_require__("../../../../../src/app/SubmissionDetails/submission-details.component.scss")]
     }),
-    __metadata("design:paramtypes", [])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__submission_details_service__["a" /* Service */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__submission_details_service__["a" /* Service */]) === "function" && _a || Object])
 ], SubmissionDetailsComponent);
 
+var _a;
 //# sourceMappingURL=submission-details.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/SubmissionDetails/submission-details.service.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* unused harmony export Item */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Service; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__("../../../http/@angular/http.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_devextreme_data_data_source__ = __webpack_require__("../../../../devextreme/data/data_source.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_devextreme_data_data_source___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_devextreme_data_data_source__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_toPromise__ = __webpack_require__("../../../../rxjs/add/operator/toPromise.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_toPromise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_toPromise__);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var Item = (function () {
+    function Item() {
+    }
+    return Item;
+}());
+
+var Service = (function () {
+    function Service(http) {
+        var _this = this;
+        this.http = http;
+        this.itemsURL = 'https://59f734d6d85fbd0012ee2235.mockapi.io/submissions-details';
+        this.itemsURL2 = 'http://59f734d6d85fbd0012ee2235.mockapi.io/submission-details-2';
+        this.itemsURL3 = 'http://59f734d6d85fbd0012ee2235.mockapi.io/submission-details-3';
+        this.items = [
+            {
+                "DocumentID": 11223344,
+                "FileName": "DocSomeUnrecognized.pdf",
+                "PreferredName": "same as File Name",
+                "Status": "Submitted",
+                "SubmittedBy": "Stark, Sansa",
+                "SubmittedDate": "2017/08/08"
+            },
+            {
+                "DocumentID": 22334455,
+                "FileName": "SomeUnrecognizedNameFile.pdf",
+                "PreferredName": "same as File Name",
+                "Status": "Currently Approved",
+                "SubmittedBy": "Stark, Arya",
+                "SubmittedDate": "2017/08/08"
+            },
+            {
+                "DocumentID": 33445566,
+                "FileName": "DocSomeUnrecognized.pdf",
+                "PreferredName": "same as File Name",
+                "Status": "Not Approved",
+                "SubmittedBy": "Stark, Sansa",
+                "SubmittedDate": "2017/07/28"
+            },
+            {
+                "DocumentID": 7676757,
+                "FileName": "SomeUnrecognizedNameFile.pdf",
+                "PreferredName": "same as File Name",
+                "Status": "Approval Withdrawn",
+                "SubmittedBy": "Stark, Arya",
+                "SubmittedDate": "2017/07/28"
+            },
+            {
+                "DocumentID": 99009977,
+                "FileName": "DocSomeUnrecognized.pdf",
+                "PreferredName": "same as File Name",
+                "Status": "Aknowledged",
+                "SubmittedBy": "Stark, Sansa",
+                "SubmittedDate": "2017/07/28",
+                "InnerItems": [
+                    {
+                        "DocumentID": 99009977,
+                        "FileName": "DocSomeUnrecognized.pdf",
+                        "PreferredName": "same as File Name",
+                        "Status": "Aknowledged",
+                        "SubmittedBy": "Stark, Sansa",
+                        "SubmittedDate": "2017/07/18"
+                    },
+                    {
+                        "DocumentID": 99009977,
+                        "FileName": "DocSomeUnrecognized.pdf",
+                        "PreferredName": "same as File Name",
+                        "Status": "Aknowledged",
+                        "SubmittedBy": "Stark, Sansa",
+                        "SubmittedDate": "2017/07/08"
+                    }
+                ]
+            },
+            {
+                "DocumentID": 4535251,
+                "FileName": "DocSomeUnrecognized.pdf",
+                "PreferredName": "same as File Name",
+                "Status": "Currently Approved",
+                "SubmittedBy": "Stark, Sansa",
+                "SubmittedDate": "2017/07/04"
+            },
+            {
+                "DocumentID": 55667788,
+                "FileName": "DocSomeUnrecognized.pdf",
+                "PreferredName": "same as File Name",
+                "Status": "Aknowledged",
+                "SubmittedBy": "Stark, Sansa",
+                "SubmittedDate": "2017/07/04"
+            },
+            {
+                "DocumentID": 99887766,
+                "FileName": "SomeUnrecognizedNameFile.pdf",
+                "PreferredName": "same as File Name",
+                "Status": "Currently Approved",
+                "SubmittedBy": "Stark, Arya",
+                "SubmittedDate": "2017/07/04"
+            },
+            {
+                "DocumentID": 99007766,
+                "FileName": "DocSomeUnrecognized.pdf",
+                "PreferredName": "same as File Name",
+                "Status": "Currently Approved",
+                "SubmittedBy": "Stark, Sansa",
+                "SubmittedDate": "2017/06/14"
+            },
+            {
+                "DocumentID": 44557788,
+                "FileName": "SomeUnrecognizedNameFile.pdf",
+                "PreferredName": "same as File Name",
+                "Status": "Approval Withdrawn",
+                "SubmittedBy": "Stark, Arya",
+                "SubmittedDate": "2017/06/14"
+            },
+            {
+                "DocumentID": 11223344,
+                "FileName": "DocSomeUnrecognized.pdf",
+                "PreferredName": "same as File Name",
+                "Status": "Submitted",
+                "SubmittedBy": "Stark, Sansa",
+                "SubmittedDate": "2017/08/08"
+            },
+            {
+                "DocumentID": 22334455,
+                "FileName": "SomeUnrecognizedNameFile.pdf",
+                "PreferredName": "same as File Name",
+                "Status": "Currently Approved",
+                "SubmittedBy": "Stark, Arya",
+                "SubmittedDate": "2017/08/08"
+            },
+            {
+                "DocumentID": 33445566,
+                "FileName": "DocSomeUnrecognized.pdf",
+                "PreferredName": "same as File Name",
+                "Status": "Not Approved",
+                "SubmittedBy": "Stark, Sansa",
+                "SubmittedDate": "2017/07/28"
+            },
+            {
+                "DocumentID": 7676757,
+                "FileName": "SomeUnrecognizedNameFile.pdf",
+                "PreferredName": "same as File Name",
+                "Status": "Approval Withdrawn",
+                "SubmittedBy": "Stark, Arya",
+                "SubmittedDate": "2017/07/28"
+            },
+            {
+                "DocumentID": 99009977,
+                "FileName": "DocSomeUnrecognized.pdf",
+                "PreferredName": "same as File Name",
+                "Status": "Aknowledged",
+                "SubmittedBy": "Stark, Sansa",
+                "SubmittedDate": "2017/07/28",
+                "InnerItems": [
+                    {
+                        "DocumentID": 99009977,
+                        "FileName": "DocSomeUnrecognized.pdf",
+                        "PreferredName": "same as File Name",
+                        "Status": "Aknowledged",
+                        "SubmittedBy": "Stark, Sansa",
+                        "SubmittedDate": "2017/07/18"
+                    },
+                    {
+                        "DocumentID": 99009977,
+                        "FileName": "DocSomeUnrecognized.pdf",
+                        "PreferredName": "same as File Name",
+                        "Status": "Aknowledged",
+                        "SubmittedBy": "Stark, Sansa",
+                        "SubmittedDate": "2017/07/08"
+                    }
+                ]
+            },
+            {
+                "DocumentID": 4535251,
+                "FileName": "DocSomeUnrecognized.pdf",
+                "PreferredName": "same as File Name",
+                "Status": "Currently Approved",
+                "SubmittedBy": "Stark, Sansa",
+                "SubmittedDate": "2017/07/04"
+            },
+            {
+                "DocumentID": 55667788,
+                "FileName": "DocSomeUnrecognized.pdf",
+                "PreferredName": "same as File Name",
+                "Status": "Aknowledged",
+                "SubmittedBy": "Stark, Sansa",
+                "SubmittedDate": "2017/07/04"
+            },
+            {
+                "DocumentID": 99887766,
+                "FileName": "SomeUnrecognizedNameFile.pdf",
+                "PreferredName": "same as File Name",
+                "Status": "Currently Approved",
+                "SubmittedBy": "Stark, Arya",
+                "SubmittedDate": "2017/07/04"
+            },
+            {
+                "DocumentID": 99007766,
+                "FileName": "DocSomeUnrecognized.pdf",
+                "PreferredName": "same as File Name",
+                "Status": "Currently Approved",
+                "SubmittedBy": "Stark, Sansa",
+                "SubmittedDate": "2017/06/14"
+            },
+            {
+                "DocumentID": 44557788,
+                "FileName": "SomeUnrecognizedNameFile.pdf",
+                "PreferredName": "same as File Name",
+                "Status": "Approval Withdrawn",
+                "SubmittedBy": "Stark, Arya",
+                "SubmittedDate": "2017/06/14"
+            }
+        ];
+        this.getData = function (url) {
+            return new __WEBPACK_IMPORTED_MODULE_2_devextreme_data_data_source___default.a({
+                load: function (loadOptions) {
+                    return _this.http.get(url)
+                        .toPromise()
+                        .then(function (response) { return response.json(); });
+                }
+            });
+        };
+        this.getItems = function () { return _this.getData(_this.itemsURL); };
+        this.getOldItems = function () { return _this.getData(_this.itemsURL2); };
+        this.getNewItems = function () { return _this.getData(_this.itemsURL3); };
+    }
+    return Service;
+}());
+Service = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Http */]) === "function" && _a || Object])
+], Service);
+
+var _a;
+//# sourceMappingURL=submission-details.service.js.map
 
 /***/ }),
 
 /***/ "../../../../../src/app/UploadedFiles/uploaded-files.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"uploaded-files-section\">\n\t<h2>{{title}}</h2>\n\t<div class=\"buttons\">\n\t\t<dx-button text=\"UPLOAD MORE FILES\"></dx-button>\n\t\t<dx-button text=\"DOWNLOAD\"></dx-button>\n\t\t<dx-button text=\"DELETE\"></dx-button>\n\t</div>\n\t<dx-data-grid\n\t\t[showColumnLines]=\"false\"\n\t\t[showRowLines]=\"true\"\n\t\t[showBorders]=\"false\"\n\t\t[dataSource]=\"files\">\n\t\t<dxo-selection\n\t\t\tmode=\"multiple\">\n\t\t</dxo-selection>\n\t\t<dxo-editing\n\t\t\t[allowUpdating]=\"true\">\n\t\t</dxo-editing>\n\t\t<dxi-column\n\t\t\t[allowSorting]=\"false\"\n\t\t\tdataField=\"FileName\">\n\t\t</dxi-column>\n\t\t<dxi-column\n\t\t\t[allowSorting]=\"false\"\n\t\t\tdataField=\"PreferredName\">\n\t\t</dxi-column>\n\t</dx-data-grid>\n</div>"
+module.exports = "<div class=\"uploaded-files-section\">\r\n\t<h2>{{title}}</h2>\r\n\t<div class=\"buttons\">\r\n\t\t<dx-button text=\"UPLOAD MORE FILES\"></dx-button>\r\n\t\t<dx-button text=\"DOWNLOAD\"></dx-button>\r\n\t\t<dx-button text=\"DELETE\"></dx-button>\r\n\t</div>\r\n\t<dx-data-grid\r\n\t\t[showColumnLines]=\"false\"\r\n\t\t[showRowLines]=\"true\"\r\n\t\t[showBorders]=\"false\"\r\n\t\t[dataSource]=\"files\">\r\n\t\t<dxo-selection\r\n\t\t\tmode=\"multiple\">\r\n\t\t</dxo-selection>\r\n\t\t<dxo-editing\r\n\t\t\t[allowUpdating]=\"true\">\r\n\t\t</dxo-editing>\r\n\t\t<dxi-column\r\n\t\t\t[allowSorting]=\"false\"\r\n\t\t\tdataField=\"FileName\">\r\n\t\t</dxi-column>\r\n\t\t<dxi-column\r\n\t\t\t[allowSorting]=\"false\"\r\n\t\t\tdataField=\"PreferredName\">\r\n\t\t</dxi-column>\r\n\t</dx-data-grid>\r\n</div>"
 
 /***/ }),
 
@@ -1065,7 +1341,7 @@ var _a;
 /***/ "../../../../../src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<data-grid-app></data-grid-app>\n<fileupload-app></fileupload-app>\n<uploaded-files-app></uploaded-files-app>\n<submission-app></submission-app>\n<submission-details-app></submission-details-app>\n<sample-app></sample-app>\n"
+module.exports = "<submission-details-app></submission-details-app>\r\n<submission-app></submission-app>\r\n<fileupload-app></fileupload-app>\r\n<uploaded-files-app></uploaded-files-app>\r\n<data-grid-app></data-grid-app>\r\n<sample-app></sample-app>\r\n"
 
 /***/ }),
 
@@ -1149,6 +1425,7 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_10_devextreme_angular__["DxDataGridModule"],
             __WEBPACK_IMPORTED_MODULE_10_devextreme_angular__["DxSelectBoxModule"],
             __WEBPACK_IMPORTED_MODULE_10_devextreme_angular__["DxCheckBoxModule"],
+            __WEBPACK_IMPORTED_MODULE_10_devextreme_angular__["DxTreeListModule"],
             __WEBPACK_IMPORTED_MODULE_10_devextreme_angular__["DxButtonModule"]
         ],
         declarations: [

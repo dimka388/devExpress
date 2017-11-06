@@ -14,6 +14,7 @@ import { DxDataGridComponent,
 	DxDataGridModule,
 	DxSelectBoxModule,
 	DxCheckBoxModule,
+	DxTreeListModule,
 	DxButtonModule } from 'devextreme-angular';
 
 @NgModule({
@@ -23,6 +24,7 @@ import { DxDataGridComponent,
 		DxDataGridModule,
 		DxSelectBoxModule,
 		DxCheckBoxModule,
+		DxTreeListModule,
 		DxButtonModule
 	],
 	declarations: [

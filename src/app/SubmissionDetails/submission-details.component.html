@@ -1,37 +1,32 @@
 <div class="submission-details-section">
 	<h2>{{title}}</h2>
-	<dx-data-grid
+	<div>
+		<dx-button text="Load Old Items" (click)="loadData(true)"></dx-button>
+		<dx-button text="Load New Items" (click)="loadData(false)"></dx-button>
+	</div>
+	<dx-tree-list
 		[showColumnLines]="false"
 		[showRowLines]="true"
 		[showBorders]="false"
-		[dataSource]="items">
-		<dxo-paging [pageSize]="10"></dxo-paging>
-		<dxo-selection
-			[selectAllMode]="page"
-			[showCheckBoxesMode]="always"
-			mode="multiple">
-		</dxo-selection>
-		<dxi-column
-			dataField="DocumentID">
-		</dxi-column>
-		<dxi-column
-			dataField="FileName">
-		</dxi-column>
-		<dxi-column
-			dataField="PreferredName">
-		</dxi-column>
-		<dxi-column
-			dataField="Status">
-		</dxi-column>
-		<dxi-column
-			caption="Submitted by"
-			dataField="SubmittedBy">
-		</dxi-column>
+		[dataSource]="items"
+		itemsExpr="InnerItems"
+		class="treeContainer"
+		dataStructure="tree">
+		<dxo-selection mode="multiple"></dxo-selection>
+		<dxi-column dataField="DocumentID"></dxi-column>
+		<dxi-column dataField="FileName"></dxi-column>
+		<dxi-column dataField="PreferredName"></dxi-column>
+		<dxi-column dataField="Status"></dxi-column>
+		<dxi-column dataField="SubmittedBy"></dxi-column>
 		<dxi-column
 			dataType="date"
-			caption="Date Submitted"
+			cellTemplate="dateCell"
 			dataField="SubmittedDate"
-			[customizeText]="customizeDate">
+			caption="Date Submitted"
+			>
 		</dxi-column>
-	</dx-data-grid>
+		<span *dxTemplate="let cellData of 'dateCell'">
+			{{cellData.value | date: 'dd-MMM-yyyy'}}
+		</span>
+	</dx-tree-list>
 </div>

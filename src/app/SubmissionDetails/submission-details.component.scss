@@ -1,6 +1,10 @@
 /deep/ .submission-details-section{
 	padding: 20px 50px;
 
+	.treeContainer{
+		height: 375px;
+	}
+
 	h2{
 		font-size: 21px;
 		font-family: 'ArialMT', 'Arial', sans-serif;
@@ -13,5 +17,11 @@
 			vertical-align: middle !important;
 			white-space: normal;
 		}
+	}
+	.dx-treelist-empty-space{
+		left: 18px;
+	}
+	[aria-expanded] .dx-select-checkbox{
+		display: none;
 	}
 }
