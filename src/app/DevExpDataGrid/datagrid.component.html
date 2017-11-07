@@ -1,4 +1,20 @@
 <dx-data-grid
-	class="data-grid-container"
-	[dataSource]="items">
+	[dataSource]="options.items">
+	<div *ngFor="let column of options.columns">
+		<dxi-column	
+			dataField="{{column.dataField}}"
+			[allowFiltering]="getAttributeValue('allowFiltering', column)"
+			[caption]="getAttributeValue('caption', column)"
+			[cellTemplate]="getAttributeValue('cellTemplate', column)">
+		</dxi-column>
+	</div>
+	<dxo-filter-row
+		[visible]="options.filters">
+	</dxo-filter-row>
+	<dxo-paging
+		[pageSize]="options.paging">
+	</dxo-paging>
+	<div *dxTemplate="let data of 'linkTemplate'">
+		<a href="#" (click)="options.linkClickHandler($event, data)">{{data.value}}</a>
+	</div>
 </dx-data-grid>

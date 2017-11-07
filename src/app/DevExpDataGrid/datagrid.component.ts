@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
 	selector: 'data-grid-app',
@@ -7,7 +7,27 @@ import { Component } from '@angular/core';
 	styleUrls: ['datagrid.component.scss']
 })
 
-export class DataGridComponent {
-	private items = [];
+export class DataGridComponent implements OnInit {
+	@Input() customOptions: any;
+
+	private getAttributeValue = (attr, column) => column[attr];
+
+	private defaultOptions: any = {
+		filters: false,
+		paging: 10,
+		columns: [],
+		items: [],
+		linkClickHandler: (event, data) => {
+			event.preventDefault();
+			console.log('Link data:', data);
+		}
+	}
+
+	private options: any = {};
+
+	ngOnInit() {
+		this.options = {...this.defaultOptions, ...this.customOptions};
+	}
+
 	constructor() {}
 }

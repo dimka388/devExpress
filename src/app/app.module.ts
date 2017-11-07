@@ -8,6 +8,7 @@ import { SubmissionComponent } from './Submission/submission.component';
 import { SubmissionDetailsComponent } from './SubmissionDetails/submission-details.component';
 import { FileUploadComponent } from './FileUpload/fileupload.component';
 import { DataGridComponent } from './DevExpDataGrid/datagrid.component';
+import { SitesListingComponent } from './SitesListing/siteslisting.component';
 import { SampleComponent } from './Sample/sample.component';
 
 import { DxDataGridComponent,
@@ -34,6 +35,7 @@ import { DxDataGridComponent,
 		SubmissionDetailsComponent,
 		FileUploadComponent,
 		DataGridComponent,
+		SitesListingComponent,
 		SampleComponent
 	],
 	bootstrap: [AppComponent]
