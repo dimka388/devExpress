@@ -1,6 +1,4 @@
-/deep/ .submission-details-section{
-	padding: 20px 50px;
-
+/deep/ .submission-details{
 	.treeContainer{
 		height: 375px;
 	}
@@ -23,5 +21,9 @@
 	}
 	[aria-expanded] .dx-select-checkbox{
 		display: none;
+	}
+	.buttons{
+		padding: 10px 0;
+		text-align: right;
 	}
 }

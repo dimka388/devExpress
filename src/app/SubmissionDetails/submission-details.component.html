@@ -1,9 +1,5 @@
-<div class="submission-details-section">
+<div class="section submission-details">
 	<h2>{{title}}</h2>
-	<div>
-		<dx-button text="Load Old Items" (click)="loadData(true)"></dx-button>
-		<dx-button text="Load New Items" (click)="loadData(false)"></dx-button>
-	</div>
 	<dx-tree-list
 		[showColumnLines]="false"
 		[showRowLines]="true"
@@ -29,4 +25,8 @@
 			{{cellData.value | date: 'dd-MMM-yyyy'}}
 		</span>
 	</dx-tree-list>
+	<div class="buttons">
+		<dx-button text="Load Old Items" (click)="loadData(true)"></dx-button>
+		<dx-button text="Load New Items" (click)="loadData(false)"></dx-button>
+	</div>
 </div>

@@ -1,20 +1,30 @@
 import { Component, ViewChild } from '@angular/core';
-import { File, Service } from './uploaded-files.service';
-import { DxDataGridComponent } from 'devextreme-angular';
+import { Service } from './uploaded-files.service';
 
 @Component({
-	selector: 'uploaded-files-app',
+	selector: 'uploaded-files',
 	providers: [ Service ],
-	templateUrl: '../UploadedFiles/uploaded-files.component.html',
-	styleUrls: ['../UploadedFiles/uploaded-files.component.scss']
+	templateUrl: '../UploadedFiles/uploaded-files.component.html'
 })
 
 export class UploadedFilesComponent {
-	@ViewChild(DxDataGridComponent) dataGrid: DxDataGridComponent;
-	title: string = 'Uploaded files';
-	files: File[];
+	private title: string = 'Uploaded files';
+
+	private options: any = {
+		selectionMode: 'multiple',
+		allowUpdating: true,
+		columns: [
+			{
+				dataField:'FileName',
+				allowEditing: false
+			},
+			{
+				dataField:'PreferredName'
+			}
+		]
+	};
 
 	constructor(private service: Service) {
-		this.files = service.getItems();
+		this.options.items = service.getItems();
 	}
 }

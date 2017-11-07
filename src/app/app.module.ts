@@ -3,13 +3,12 @@ import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { UploadedFilesComponent } from './UploadedFiles/uploaded-files.component';
-import { SubmissionComponent } from './Submission/submission.component';
-import { SubmissionDetailsComponent } from './SubmissionDetails/submission-details.component';
-import { FileUploadComponent } from './FileUpload/fileupload.component';
-import { DataGridComponent } from './DevExpDataGrid/datagrid.component';
+import { DataGridComponent } from './DataGrid/datagrid.component';
 import { SitesListingComponent } from './SitesListing/siteslisting.component';
-import { SampleComponent } from './Sample/sample.component';
+import { SubmissionListingComponent } from './SubmissionListing/submissionlisting.component';
+import { SubmissionDetailsComponent } from './SubmissionDetails/submission-details.component';
+import { UploadedFilesComponent } from './UploadedFiles/uploaded-files.component';
+import { FileUploadComponent } from './FileUpload/fileupload.component';
 
 import { DxDataGridComponent,
 	DxDataGridModule,
@@ -30,13 +29,12 @@ import { DxDataGridComponent,
 	],
 	declarations: [
 		AppComponent,
-		UploadedFilesComponent,
-		SubmissionComponent,
-		SubmissionDetailsComponent,
-		FileUploadComponent,
 		DataGridComponent,
 		SitesListingComponent,
-		SampleComponent
+		SubmissionListingComponent,
+		SubmissionDetailsComponent,
+		UploadedFilesComponent,
+		FileUploadComponent
 	],
 	bootstrap: [AppComponent]
 })

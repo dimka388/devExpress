@@ -1,0 +1,41 @@
+<dx-data-grid
+	[dataSource]="options.items">
+	<div *ngFor="let column of options.columns">
+		<dxi-column	
+			dataField="{{column.dataField}}"
+			[allowFiltering]="getAttributeValue('allowFiltering', column)"
+			[allowEditing]="getAttributeValue('allowEditing', column)"
+			[dataType]="getAttributeValue('dataType', column)"
+			[caption]="getAttributeValue('caption', column)"
+			[cellTemplate]="getAttributeValue('cellTemplate', column)">
+		</dxi-column>
+	</div>
+	<dxo-header-filter
+		[visible]="options.headerFilters">
+	</dxo-header-filter>
+	<dxo-filter-row
+		[visible]="options.filters">
+	</dxo-filter-row>
+	<dxo-selection
+		[mode]="options.selectionMode"
+		[showCheckBoxesMode]="options.selectionCheckboxes">
+	</dxo-selection>
+	<dxo-editing
+		[mode]="options.editingMode"
+		[allowUpdating]="options.allowUpdating"
+		[allowDeleting]="options.allowDeleting"
+		[allowAdding]="options.allowAdding">
+	</dxo-editing>
+	<dxo-paging
+		[pageSize]="options.paging">
+	</dxo-paging>
+	<a href="#" *dxTemplate="let data of 'linkTemplate'" (click)="options.linkClickHandler($event, data)">
+		{{data.value}}
+	</a>
+	<span *dxTemplate="let data of 'dateTemplate'">
+		{{data.value | date: 'dd-MMM-yyyy'}}
+	</span>
+	<span *dxTemplate="let data of 'statusTemplate'" [class]="'status-' + (data.value | lowercase)">
+		{{data.value}}
+	</span>
+</dx-data-grid>

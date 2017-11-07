@@ -3,10 +3,9 @@ import { Item, Service } from './submission-details.service';
 
 @Component({
 	selector: 'submission-details-app',
-	moduleId: module.id,
 	providers: [ Service ],
-	templateUrl: 'submission-details.component.html',
-	styleUrls: ['submission-details.component.scss']
+	templateUrl: '../SubmissionDetails/submission-details.component.html',
+	styleUrls: ['../SubmissionDetails/submission-details.component.scss']
 })
 
 export class SubmissionDetailsComponent {

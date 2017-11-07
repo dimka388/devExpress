@@ -3,16 +3,14 @@ import { Service } from './siteslisting.service';
 
 @Component({
 	selector: 'sites-listing',
-	moduleId: module.id,
 	providers: [ Service ],
-	templateUrl: 'siteslisting.component.html',
-	styleUrls: ['siteslisting.component.scss']
+	templateUrl: '../SitesListing/siteslisting.component.html'
 })
 
 export class SitesListingComponent {
 	private title: string = 'Sites';
+
 	private options: any = {
-		holderClass: 'sites-table',
 		filters: true,
 		columns: [
 			{
@@ -28,6 +26,7 @@ export class SitesListingComponent {
 			},
 			{
 				dataField:'contacts',
+				dataType: 'number',
 				allowFiltering: false,
 				caption: 'Number of Contacts',
 				cellTemplate: 'linkTemplate'
