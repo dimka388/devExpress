@@ -10,12 +10,17 @@ import { SubmissionDetailsComponent } from './SubmissionDetails/submission-detai
 import { UploadedFilesComponent } from './UploadedFiles/uploaded-files.component';
 import { FileUploadComponent } from './FileUpload/fileupload.component';
 
-import { DxDataGridComponent,
+import 'devextreme-intl';
+import { locale } from 'devextreme/localization'; 
+import { DevExtremeModule,
+	DxDataGridComponent,
 	DxDataGridModule,
 	DxSelectBoxModule,
 	DxCheckBoxModule,
 	DxTreeListModule,
 	DxButtonModule } from 'devextreme-angular';
+
+locale(navigator.language);
 
 @NgModule({
 	imports: [

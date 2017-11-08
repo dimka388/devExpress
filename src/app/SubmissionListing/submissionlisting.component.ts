@@ -39,8 +39,12 @@ export class SubmissionListingComponent {
 			{
 				dataField: 'SubmittedDate',
 				dataType: 'date',
-				caption: 'Date Submitted',
-				cellTemplate: 'dateTemplate'
+				format: {day: '2-digit', month: 'short', year: 'numeric', type: 'dd-mm-yyyy'},
+				caption: 'Date Submitted'
+				// cellTemplate: 'dateTemplate'
+				// "dd-mm-yyyy": function(date) {
+				// 	return [FORMATTERS.dd(date), cutCaptions([FORMATTERS.month(date)], "abbreviated"), FORMATTERS.year(date)].join("-")
+				// }
 			}
 		]
 	};

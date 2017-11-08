@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { locale, loadMessages } from 'devextreme/localization';
 
 @Component({
 	selector: 'data-grid-app',
@@ -25,7 +26,7 @@ export class DataGridComponent implements OnInit {
 		items: [],
 		linkClickHandler: (event, data) => {
 			event.preventDefault();
-			console.log('Link data:', data);
+			console.log('Link data:', data.value);
 		}
 	}
 
