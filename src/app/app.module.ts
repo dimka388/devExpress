@@ -4,14 +4,13 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { DataGridComponent } from './DataGrid/datagrid.component';
+import { TreeListComponent } from './TreeList/treelist.component';
 import { SitesListingComponent } from './SitesListing/siteslisting.component';
 import { SubmissionListingComponent } from './SubmissionListing/submissionlisting.component';
 import { SubmissionDetailsComponent } from './SubmissionDetails/submission-details.component';
 import { UploadedFilesComponent } from './UploadedFiles/uploaded-files.component';
 import { FileUploadComponent } from './FileUpload/fileupload.component';
 
-import 'devextreme-intl';
-import { locale } from 'devextreme/localization'; 
 import { DevExtremeModule,
 	DxDataGridComponent,
 	DxDataGridModule,
@@ -19,8 +18,6 @@ import { DevExtremeModule,
 	DxCheckBoxModule,
 	DxTreeListModule,
 	DxButtonModule } from 'devextreme-angular';
-
-locale(navigator.language);
 
 @NgModule({
 	imports: [
@@ -35,6 +32,7 @@ locale(navigator.language);
 	declarations: [
 		AppComponent,
 		DataGridComponent,
+		TreeListComponent,
 		SitesListingComponent,
 		SubmissionListingComponent,
 		SubmissionDetailsComponent,

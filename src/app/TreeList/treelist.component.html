@@ -1,5 +1,7 @@
-<dx-data-grid
-	[dataSource]="options.items">
+<dx-tree-list
+	[dataSource]="options.items"
+	[itemsExpr]="options.itemsExpr"
+	[dataStructure]="options.dataStructure">
 	<div *ngFor="let column of options.columns">
 		<dxi-column
 			[dataField]="column.dataField"
@@ -27,13 +29,10 @@
 		[allowDeleting]="options.allowDeleting"
 		[allowAdding]="options.allowAdding">
 	</dxo-editing>
-	<dxo-paging
-		[pageSize]="options.paging">
-	</dxo-paging>
 	<a href="{{data.value}}" *dxTemplate="let data of 'linkTemplate'">
 		{{data.value}}
 	</a>
 	<span *dxTemplate="let data of 'statusTemplate'" [class]="'status-' + (data.value | lowercase)">
 		{{data.value}}
 	</span>
-</dx-data-grid>
+</dx-tree-list>

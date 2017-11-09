@@ -2,13 +2,13 @@ import { Component, Input, OnInit } from '@angular/core';
 import { DatePipe } from '@angular/common';
 
 @Component({
-	selector: 'data-grid-app',
+	selector: 'tree-list-app',
 	providers: [DatePipe],
-	templateUrl: '../DataGrid/datagrid.component.html',
-	styleUrls: ['../DataGrid/datagrid.component.scss']
+	templateUrl: '../TreeList/treelist.component.html',
+	styleUrls: ['../TreeList/treelist.component.scss']
 })
 
-export class DataGridComponent implements OnInit {
+export class TreeListComponent implements OnInit {
 	@Input() customOptions: any;
 
 	private defaultOptions: any = {
@@ -19,6 +19,8 @@ export class DataGridComponent implements OnInit {
 				}
 			}
 		},
+		itemsExpr: 'InnerItems',
+		dataStructure: 'tree',
 		filters: false,
 		headerFilters: false,
 		selectionMode: 'none',
@@ -27,7 +29,6 @@ export class DataGridComponent implements OnInit {
 		allowUpdating: false,
 		allowDeleting: false,
 		allowAdding: false,
-		paging: 10,
 		columns: [],
 		items: []
 	}

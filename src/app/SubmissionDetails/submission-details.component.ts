@@ -10,17 +10,43 @@ import { Item, Service } from './submission-details.service';
 
 export class SubmissionDetailsComponent {
 	private title: string = 'Submission Details';
-	private items: Item[];
 
+	private options: any = {
+		selectionMode: 'multiple',
+		columns: [
+			{
+				dataField:'DocumentID'
+			},
+			{
+				dataField:'FileName'
+			},
+			{
+				dataField:'PreferredName'
+			},
+			{
+				dataField:'Status'
+			},
+			{
+				dataField:'SubmittedBy'
+			},
+			{
+				dataField:'SubmittedDate',
+				dataType: 'date',
+				caption: 'Date Submitted'
+			}
+		]
+	};
+
+	// TODO : need fix it
 	loadData : any = (state:boolean) => {
 		if (state) {
-			this.items = this.service.getOldItems();
+			this.options.items = this.service.getOldItems();
 		} else {
-			this.items = this.service.getNewItems();
+			this.options.items = this.service.getNewItems();
 		}
 	}
 
 	constructor(private service: Service) {
-		this.items = service.getItems();
+		this.options.items = service.getItems();
 	}
 }

@@ -1,27 +1,4 @@
-/deep/ .submission-details{
-	.treeContainer{
-		height: 375px;
-	}
-
-	h2{
-		font-size: 21px;
-		font-family: 'ArialMT', 'Arial', sans-serif;
-		font-weight: 400;
-		margin: 0 0 10px;
-	}
-
-	.dx-datagrid-table{
-		td{
-			vertical-align: middle !important;
-			white-space: normal;
-		}
-	}
-	.dx-treelist-empty-space{
-		left: 18px;
-	}
-	[aria-expanded] .dx-select-checkbox{
-		display: none;
-	}
+.submission-details{
 	.buttons{
 		padding: 10px 0;
 		text-align: right;
